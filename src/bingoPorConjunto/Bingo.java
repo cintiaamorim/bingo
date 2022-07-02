@@ -21,14 +21,14 @@ public class Bingo {
 				System.out.println("Todos os números possíveis já foram sorteados");
 			}
 			else if(maxLista == false) {
-				numeroSorteado = aleatorio.nextInt(5) + 1;
+				numeroSorteado = aleatorio.nextInt(99) + 1;
 				verificarNumeroRepetido(numeroSorteado);
 			}
 
 		}
 	
 	public boolean verificarLimite(boolean checkLimite) {
-		if(conjunto.size() == 5) {
+		if(conjunto.size() == 99) {
 			return true;
 	}
 			return false;
