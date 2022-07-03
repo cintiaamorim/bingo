@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 public class Bingo {
 	
-	boolean maxLista = false;
+	boolean qntMaxNum = false;
 	
 	Integer numeroSorteado;
 	
@@ -16,19 +16,19 @@ public class Bingo {
 	
 	public void sortearNumero() 
 	{			
-			maxLista = verificarLimite(false);
-			if(maxLista == true) {
+			qntMaxNum = verificarLimite(false);
+			if(qntMaxNum == true) {
 				System.out.println("Todos os números possíveis já foram sorteados");
 			}
-			else if(maxLista == false) {
-				numeroSorteado = aleatorio.nextInt(99) + 1;
+			else if(qntMaxNum == false) {
+				numeroSorteado = aleatorio.nextInt(5) + 1;
 				verificarNumeroRepetido(numeroSorteado);
 			}
 
 		}
 	
 	public boolean verificarLimite(boolean checkLimite) {
-		if(conjunto.size() == 99) {
+		if(conjunto.size() == 5) {
 			return true;
 	}
 			return false;
@@ -50,9 +50,8 @@ public class Bingo {
 		System.out.println("Número sorteado:" + numeroSorteado);
 		
 	}
-
 	
-	public void exibirTodosNumerosSorteados() {
+	public void sairSorteio() {
 		System.out.println("Fim do Sorteio");
 		if(conjunto.isEmpty()) {
 			System.out.println("Nenhum número foi sorteado");
@@ -61,5 +60,5 @@ public class Bingo {
 		System.out.println("Os números sorteados são: " + conjunto.toString());
 		}
 		}
-
+		
 }
