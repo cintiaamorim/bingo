@@ -20,7 +20,7 @@ public class Sorteio {
 				letra = entrada.next();
 				if(letra.equalsIgnoreCase("X")) {
 					bingo.sairSorteio();
-					break;
+					continue;
 				}
 				bingo.sortearNumero();
 				//Se a quantidade de números definida no intervalo da regra para sorteio estiver chegada ao limite 
