@@ -12,23 +12,23 @@ public class Bingo {
 	
 	Random aleatorio = new Random();
 	
-	Set<Integer> conjunto = new TreeSet<Integer>();
+	Set<Integer> conjunto = new TreeSet<>();
 	
 	public void sortearNumero() 
 	{			
-			qntMaxNum = verificarLimite(false);
-			if(qntMaxNum == true) {
+			qntMaxNum = verificarLimite();
+			if(qntMaxNum) {
 				System.out.println("Todos os números possíveis já foram sorteados");
 			}
-			else if(qntMaxNum == false) {
-				numeroSorteado = aleatorio.nextInt(5) + 1;
+			else {
+				numeroSorteado = aleatorio.nextInt(99) + 1;
 				verificarNumeroRepetido(numeroSorteado);
 			}
 
 		}
 	
-	public boolean verificarLimite(boolean checkLimite) {
-		if(conjunto.size() == 5) {
+	public boolean verificarLimite() {
+		if(conjunto.size() == 99) {
 			return true;
 	}
 			return false;
